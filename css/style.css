@@ -68,13 +68,17 @@ header{
 }
 .top-btn a{
     display: inline-block;
-    background: var(--text-color);
+    background: var(--main-color);
     color: #fff;
     padding: 17px 32px;
     border-radius: 30px;
     border: none;
     font-size: 17px;
     font-weight: 700;
+    transition: all .40s ease;
+}
+.top-btn a:hover{
+    background: var(--text-color);
 }
 
 section{
@@ -486,4 +490,114 @@ header.sticky{
     font-size: 15px;
     font-weight: 700;
     padding: 20px;
+}
+
+@media (max-width: 1640px){
+    .home{
+        height: 80vh;
+        padding-top: 100px;
+    }
+    header{
+        padding: 14px 3%;
+        transition: .3s;
+    }
+    header.sticky{
+        padding: 10px 3%;
+        transition: .3s;
+    }
+    section{
+        padding: 70px 3%;
+        transition: .3s;
+    }
+}
+
+@media (max-width: 1100px){
+    #menu-icon{
+        display: block;
+    }
+    .top-btn{
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        top: -700%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #fff;
+        align-items: flex-start;
+        box-shadow: 0px 0px 1px #13084982;
+        transition: all .40s ease;
+    }
+    .navbar a{
+        display: block;
+        padding: 0.8rem;
+        margin: 0.5rem;
+    }
+    .navbar.open{
+        top: 100%;
+    }
+}
+
+@media (max-width: 1090px){
+    :root{
+        --big-font: 3.7rem;
+        --h2-font: 2.6rem;
+        --p-font: 1rem;
+        transition: .3s;
+    }
+}
+
+@media (max-width: 880px){
+    .home{
+        height: 75vh;
+        padding-top: 100px;
+    }
+    section{
+        padding: 80px 3%;
+    }
+    :root{
+        --big-font: 3.2rem;
+        --h2-font: 2.2rem;
+    }
+    
+}
+@media (max-width: 760px){
+    .home{
+        grid-template-columns: 1fr;
+        height: 100vh;
+        grid-gap: 1rem;
+    }
+    .home-text{
+        text-align: center;
+    }
+    .home-img{
+        text-align: center;
+    }
+    .home-img img{
+        width: 300px;
+        max-width: 100%;
+        height: auto;
+    }
+    .about{
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .about-text{
+        text-align: center;
+    }
+    .about-img{
+        order: 2;
+        text-align: center;
+    }
+    .about-img img{
+        padding-top: 0px;
+    }
+    section{
+        padding: 65px 3%;
+        transition: .3s;
+    }
+    .letter form{
+        width: 250px;
+    }
 }
